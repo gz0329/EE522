@@ -1,0 +1,72 @@
+ #####################################################
+
+     Memory Reading Speed Test armv8 64 Bit by Roy Longbottom
+
+               Start of test Sun Jan 24 11:20:57 2021
+
+  Memory   x[m]=x[m]+s*y[m] Int+   x[m]=x[m]+y[m]         x[m]=y[m]
+  KBytes    Dble   Sngl  Int32   Dble   Sngl  Int32   Dble   Sngl  Int32
+    Used    MB/S   MB/S   MB/S   MB/S   MB/S   MB/S   MB/S   MB/S   MB/S
+
+       8    1801   1111   1111   1945   1253   1235   1323    912    902
+      16    1801   1110   1111   1906   1251   1230   1322    891    853
+      32    1757   1090   1100   1868   1215   1214   1278    847    845
+      64    1752   1098   1094   1886   1218   1185   1286    842    842
+     128    1692   1098   1100   1821   1225   1194   1287    846    841
+     256    1692   1107   1103   1813   1228   1189   1289    849    844
+     512    1689   1104   1098   1850   1225   1192   1278    846    845
+    1024    1552   1088   1083   1679   1204   1175    969    810    810
+    2048    1469   1094   1085   1380   1209   1179    789    754    754
+    4096    1428   1089   1081   1448   1202   1177    776    765    774
+    8192    1483   1094   1085   1510   1208   1182    788    775    729
+
+                End of test Sun Jan 24 11:21:17 2021
+
+SYSTEM INFORMATION
+
+From File /proc/cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 3 (v7l)
+BogoMIPS	: 144.00
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xd08
+CPU revision	: 3
+
+processor	: 1
+model name	: ARMv7 Processor rev 3 (v7l)
+BogoMIPS	: 144.00
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xd08
+CPU revision	: 3
+
+processor	: 2
+model name	: ARMv7 Processor rev 3 (v7l)
+BogoMIPS	: 144.00
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xd08
+CPU revision	: 3
+
+processor	: 3
+model name	: ARMv7 Processor rev 3 (v7l)
+BogoMIPS	: 144.00
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CLinux version 5.4.83-v7l+ (dom@buildbot) (gcc version 8.4.0 (Ubuntu/Linaro 8.4.0-3ubuntu1)) #1379 SMP Mon Dec 14 13:11:54 GMT 2020
+ 
+
+From File /proc/version
+Linux version 5.4.83-v7l+ (dom@buildbot) (gcc version 8.4.0 (Ubuntu/Linaro 8.4.0-3ubuntu1)) #1379 SMP Mon Dec 14 13:11:54 GMT 2020
+ 
+
+Additional information - 
+
