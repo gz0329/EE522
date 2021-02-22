@@ -134,15 +134,7 @@ uint8_t readStatus()
 // Generic I2C read register (single byte)
 uint8_t read8(uint8_t reg)
 {
-/*
-  Wire.beginTransmission(_addr);
-  Wire.write(reg);
-  Wire.endTransmission();
-//  Wire.beginTransmission(_addr);
-  Wire.requestFrom(_addr,(uint8_t)1);
-  uint8_t data = Wire.read();
-//  Wire.endTransmission();
-*/
+
   uint8_t data = wiringPiI2CReadReg8 (fd, reg);
 
   return data;
@@ -151,12 +143,7 @@ uint8_t read8(uint8_t reg)
 // Generic I2C write data to register (single byte)
 void write8(uint8_t reg, uint8_t data)
 {
-/*
-  Wire.beginTransmission(_addr);
-  Wire.write(reg);
-  Wire.write(data);
-  Wire.endTransmission();
-*/
+
   wiringPiI2CWriteReg8 (fd, reg, data);
 
   return;
@@ -165,19 +152,7 @@ void write8(uint8_t reg, uint8_t data)
 // Generic I2C read registers (two bytes, LSB first)
 uint16_t read16(uint8_t reg)
 {
-/*
-  uint16_t data = 0x0000;
 
-  Wire.beginTransmission(_addr);
-  Wire.write(reg);
-  Wire.endTransmission();
-
-//  Wire.beginTransmission(_addr);
-  Wire.requestFrom(_addr, (uint8_t)2); // request 2 bytes of data
-  data = Wire.read();
-  data |= (Wire.read() << 8);
-//  Wire.endTransmission();
-*/
   uint16_t data = wiringPiI2CReadReg16 (fd, reg);
 
   return data;
@@ -186,12 +161,6 @@ uint16_t read16(uint8_t reg)
 // Generic I2C write data to registers (two bytes, LSB first)
 void write16(uint8_t reg, uint16_t data)
 {
-/*
-  Wire.beginTransmission(_addr);
-  Wire.write(reg);
-  Wire.write(data);
-  Wire.write(data>>8);
-  Wire.endTransmission();
-  */
+
   wiringPiI2CWriteReg16 (fd, reg, data);
 }
