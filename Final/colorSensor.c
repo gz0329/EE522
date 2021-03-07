@@ -50,7 +50,7 @@ bool reset()
 }
 
 // Setup Configuration registers (three registers) - returns true if successful
-// Use CONFIG1 variables from SFE_ISL29125.h for first parameter config1, CONFIG2 for config2, 3 for 3
+// Use CONFIG1 variables from colorSensor.h for first parameter config1, CONFIG2 for config2, 3 for 3
 // Use CFG_DEFAULT for default configuration for that register
 bool config(uint8_t config1, uint8_t config2, uint8_t config3)
 {
