@@ -98,27 +98,48 @@ int main (void)
 		printf("red: %d green: %d blue: %d\n", r, g, b);
 		printf("%s\n", emotionCurr );
 
-		if( r >= g && r >= b )
+		if( ( r + g + b ) > 30 )
 		{
-			digitalWrite(red, LOW);
-    		digitalWrite(green, HIGH);
-    		digitalWrite(blue, HIGH);
-		} else if( b >= r && b >= g )
-		{
-			digitalWrite(blue, LOW);
-    		digitalWrite(green, HIGH);
-    		digitalWrite(red, HIGH);
-		} else if( g >= r && g >= b )
-		{
-			digitalWrite(green, LOW);
-    		digitalWrite(red, HIGH);
-    		digitalWrite(blue, HIGH);
-		} else
+			if( r > g && r > b )
+			{
+				digitalWrite(red, LOW);
+	    		digitalWrite(green, HIGH);
+	    		digitalWrite(blue, HIGH);
+			} else if( b > r && b > g )
+			{
+				digitalWrite(blue, LOW);
+	    		digitalWrite(green, HIGH);
+	    		digitalWrite(red, HIGH);
+			} else if( g > r && g > b )
+			{
+				digitalWrite(green, LOW);
+	    		digitalWrite(red, HIGH);
+	    		digitalWrite(blue, HIGH);
+			} 
+		}else
 		{
 			digitalWrite(red, HIGH);
     		digitalWrite(green, HIGH);
     		digitalWrite(blue, HIGH);
 		}
+		delay(500);
+
+		if( emotionCurr == 'a' )
+		{
+			digitalWrite(red, LOW);
+    		digitalWrite(green, HIGH);
+    		digitalWrite(blue, HIGH);
+		} else if( emotionCurr == 's' )
+		{
+			digitalWrite(blue, LOW);
+    		digitalWrite(green, HIGH);
+    		digitalWrite(red, HIGH);
+		} else if( emotionCurr == 'h' )
+		{
+			digitalWrite(green, LOW);
+    		digitalWrite(red, HIGH);
+    		digitalWrite(blue, HIGH);
+		} 
 		delay(500);
 	}
 }	
